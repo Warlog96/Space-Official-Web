@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Structure - Space Club</title>
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Space+Mono&family=Montserrat:wght@300;400;600;700&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="index.html" style="display: flex; align-items: center; text-decoration: none; color: inherit;">
+                <img src="logo.png" alt="Space Club RIT Logo">
+                <h1>Space Club RIT</h1>
+            </a>
+        </div>
+        <nav>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="projects.html">Our Projects</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-btn">Our Team <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-content">
+                        <li><a href="propulsion.html">Propulsion</a></li>
+                        <li><a href="structure.html">Structure</a></li>
+                        <li><a href="recovery.html">Recovery</a></li>
+                        <li><a href="avionics.html">Avionics</a></li>
+                        <li><a href="satellite.html">Satellite</a></li>
+                        <li><a href="communication.html">Communication</a></li>
+                        <li><a href="Management.html">Management</a></li>
+                        <li><a href="Leaderboard.html">Leaderboard</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="team-section">
+            <div class="team-header">
+                <h2>Structure Team</h2>
+                <p class="team-description">Welcome to the Structure team page! We design and build the physical
+                    framework of our rockets, ensuring they can withstand extreme forces while remaining lightweight.
+                    Our team specializes in aerodynamics, material selection, structural
+                    analysis, and manufacturing techniques.</p>
+            </div>
+
+            <div class="team-head">
+                <div class="member-card">
+                    <div class="member-img">
+                        <img src="images\members\structure\AdityaG.jpeg" alt="Team Head">
+                    </div>
+                    <div class="member-info">
+                        <h3>Aditya Gidde</h3>
+                        <p class="position">Structure Team Lead</p>
+                        <p class="details">2nd Year, Mechatronics Engineering</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="team-subheading">Our Structure Engineers</h3>
+            <div class="team-members">
+                <!-- Member 1 -->
+                <div class="member-card">
+                    <div class="member-img">
+                        <img src="images\members\structure\shridhar.jpg" alt="Team Member">
+                    </div>
+                    <div class="member-info">
+                        <h3>Shridhar Kesarkar</h3>
+                        <p class="position">Structure Member</p>
+                        <p class="details">2nd Year, Mechatronics Engineering</p>
+                    </div>
+                </div>
+
+                <!-- Member 4 -->
+                <div class="member-card">
+                    <div class="member-img">
+                        <img src="images\members\structure\Soham.jpg" alt="Team Member">
+                    </div>
+                    <div class="member-info">
+                        <h3>Atharv Kore</h3>
+                        <p class="position">Structure Member</p>
+                        <p class="details">2nd Year, Mechatronics Engineering</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Space Club RIT</h4>
+                <p>Rajarambapu Institute of Technology</p>
+                <p>Tal. Walwa, Dist. Sangli, Rajaramnagar, 415414.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/spaceclub_rit" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/space-club-rit/" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="mailto:spaceclub@ritindia.edu"><i class="fas fa-envelope"></i></a>
+                    <a href="https://youtube.com/@rit_spaceclub?si=YIbA51QsorcB-uHe" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section newsletter">
+                <h4>Stay Updated</h4>
+                <p>Join our social media for every update on our latest launches and events.</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Space Club RIT. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Space Club RIT at Rajarambapu Institute of Technology - Student team building sounding rockets, satellites, and avionics systems.">
+    <title>Space Club - Home</title>
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Space+Mono&family=Montserrat:wght@300;400;600;700&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body class="home">
+    <!-- Slideshow Background Container -->
+    <!-- Background Image Container -->
+    <div class="background-container">
+        <div class="background-overlay"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="index.html" style="display: flex; align-items: center; text-decoration: none; color: inherit;">
+                <img src="logo.png" alt="Space Club RIT Logo">
+                <h1>Space Club RIT</h1>
+            </a>
+        </div>
+        <nav>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-list">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="projects.html">Our Projects</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-btn">Our Team <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-content">
+                        <li><a href="propulsion.html">Propulsion</a></li>
+                        <li><a href="structure.html">Structure</a></li>
+                        <li><a href="recovery.html">Recovery</a></li>
+                        <li><a href="avionics.html">Avionics</a></li>
+                        <li><a href="satellite.html">Satellite</a></li>
+                        <li><a href="communication.html">Communication</a></li>
+                        <li><a href="Management.html">Management</a></li>
+                        <li><a href="Leaderboard.html">Leaderboard</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero reveal-up">
+        <div class="hero-text reveal-up reveal-delay-200">
+            <h3 class="hero-welcome">Welcome to</h3>
+            <h1 class="hero-brand">Space Club</h1>
+            <p>in the Where Students Build Rockets and Satellites to Explore the Universe.</p>
+            <div class="buttons">
+                <a href="contact.html" class="btn-primary">Join Us</a>
+                <a href="#about" class="btn-secondary">Learn More</a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Features Section -->
+    <!-- Features Section -->
+    <section class="features" id="what-we-do">
+        <div class="section-title reveal-up">
+            <h2>What We Do</h2>
+            <p>Pushing the Boundaries of Student Rocketry</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card reveal-up reveal-delay-100">
+                <div class="icon-wrapper">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h3>Rocketry</h3>
+                <p>We design, build, and launch high-powered sounding rockets, aiming for new heights and precision.</p>
+            </div>
+            <div class="feature-card reveal-up reveal-delay-200">
+                <div class="icon-wrapper">
+                    <i class="fas fa-satellite"></i>
+                </div>
+                <h3>Satellites</h3>
+                <p>Our team develops CanSats and CubeSats to perform scientific experiments in sub-orbital flights.</p>
+            </div>
+            <div class="feature-card reveal-up reveal-delay-300">
+                <div class="icon-wrapper">
+                    <i class="fas fa-microchip"></i>
+                </div>
+                <h3>Avionics</h3>
+                <p>Custom flight computers and ground control systems ensure our rockets fly safely and stay connected.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Merged About Section -->
+    <section id="about" class="about-container about-section-merged">
+        <!-- Star Background -->
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+
+        <!-- About Hero Section -->
+        <section class="about-hero reveal-up">
+            <h2>About Space Club</h2>
+            <p class="subtitle">Exploring the final frontier, one project at a time</p>
+        </section>
+
+        <!-- Mission Section -->
+        <section class="about-mission">
+            <div class="mission-card reveal-up reveal-delay-100">
+                <i class="fas fa-rocket"></i>
+                <h3>Our Mission</h3>
+                <p>To advance aerospace education and provide hands-on experience in rocket design, construction, and
+                    launch operations.</p>
+            </div>
+            <div class="mission-card reveal-up reveal-delay-200">
+                <i class="fas fa-users"></i>
+                <h3>Our Team</h3>
+                <p>A diverse group of engineers, scientists, and enthusiasts dedicated to pushing the boundaries of
+                    space technology.</p>
+            </div>
+            <div class="mission-card reveal-up reveal-delay-300">
+                <i class="fas fa-star"></i>
+                <h3>Our Vision</h3>
+                <p>To become a leading university rocketry team recognized for innovation and excellence in aerospace
+                    engineering.</p>
+            </div>
+        </section>
+
+
+
+        <!-- Events Slideshow Section -->
+        <section class="events-slideshow reveal-up">
+            <div class="section-header">
+                <h2>Life at Space Club</h2>
+                <p>Capturing our journey to the stars</p>
+            </div>
+            <div class="slideshow-container reveal-up reveal-delay-200">
+                <div class="slide fade">
+                    <img src="images/Slide1.jpeg" alt="Club Event 1">
+                </div>
+                <div class="slide fade">
+                    <img src="images/Slide2.jpeg" alt="Club Event 2">
+                </div>
+                <div class="slide fade">
+                    <img src="images/Slide3.jpeg" alt="Club Event 3">
+                </div>
+                <div class="slide fade">
+                    <img src="images/Slide4.jpeg" alt="Club Event 4">
+                </div>
+                <div class="slide fade">
+                    <img src="images/Slide5.jpeg" alt="Club Event 5">
+                </div>
+                <div class="slide fade">
+                    <img src="images/Slide6.jpeg" alt="Club Event 6">
+                </div>
+                <div class="slide fade">
+                    <img src="images/Slide7.jpeg" alt="Club Event 7">
+                </div>
+                <div class="slide fade">
+                    <img src="images/Slide8.jpeg" alt="Club Event 8">
+                </div>
+                <div class="slide fade">
+                    <img src="images/Slide9.jpeg" alt="Club Event 9">
+                </div>
+                <div class="slide fade">
+                    <img src="images/Slide10.jpeg" alt="Club Event 10">
+                </div>
+                <div class="slide fade">
+                    <img src="images/Slide11.jpeg" alt="Club Event 11">
+                </div>
+                <div class="slide fade">
+                    <img src="images/Slide12.jpeg" alt="Club Event 12">
+                </div>
+                <div class="slide fade">
+                    <img src="images/Slide13.jpeg" alt="Club Event 13">
+                </div>
+                <div class="slide fade">
+                    <img src="images/Slide14.jpeg" alt="Club Event 14">
+                </div>
+                <div class="slide fade">
+                    <img src="images/Slide15.jpeg" alt="Club Event 15">
+                </div>
+                <div class="slide fade">
+                    <img src="images/Slide16.jpeg" alt="Club Event 16">
+                </div>
+                <div class="slide fade">
+                    <img src="images/Slide17.jpeg" alt="Club Event 17">
+                </div>
+                <div class="slide fade">
+                    <img src="images/Slide18.jpeg" alt="Club Event 18">
+                </div>
+                <div class="slide fade">
+                    <img src="images/Slide19.jpeg" alt="Club Event 19">
+                </div>
+                <div class="slide fade">
+                    <img src="images/Slide20.jpeg" alt="Club Event 20">
+                </div>
+                <div class="slide fade">
+                    <img src="images/Slide21.jpeg" alt="Club Event 21">
+                </div>
+                <div class="slide fade">
+                    <img src="images/Slide22.jpeg" alt="Club Event 22">
+                </div>
+                <div class="slide fade">
+                    <img src="images/Slide23.jpeg" alt="Club Event 23">
+                </div>
+                <div class="slide fade">
+                    <img src="images/Slide24.jpeg" alt="Club Event 24">
+                </div>
+                <div class="slide fade">
+                    <img src="images/Slide25.jpeg" alt="Club Event 25">
+                </div>
+                <div class="slide fade">
+                    <img src="images/Slide26.jpeg" alt="Club Event 26">
+                </div>
+                <div class="slide fade">
+                    <img src="images/Slide27.jpeg" alt="Club Event 27">
+                </div>
+                <div class="slide fade">
+                    <img src="images/Slide28.jpeg" alt="Club Event 28">
+                </div>
+                <div class="slide fade">
+                    <img src="images/Slide29.jpeg" alt="Club Event 29">
+                </div>
+                <div class="slide fade">
+                    <img src="images/Slide30.jpeg" alt="Club Event 30">
+                </div>
+
+                <a class="prev">&#10094;</a>
+                <a class="next">&#10095;</a>
+
+
+            </div>
+        </section>
+
+        <!-- Video Showcase Section -->
+        <section class="video-showcase reveal-up">
+            <div class="video-grid">
+                <!-- Video Slot 1 -->
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <video src="images\Dhruva1.mp4" title="Highlight Reel 1" autoplay muted loop playsinline
+                            style="width: 100%; height: 100%; object-fit: cover;"></video>
+                    </div>
+                </div>
+                <!-- Video Slot 2 -->
+
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <video src="images\Eklavlya motor.mp4" title="Highlight Reel 2" autoplay muted loop playsinline
+                            style="width: 100%; height: 100%; object-fit: cover;"></video>
+                    </div>
+                </div>
+                <!-- Video Slot 3 -->
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <video src="images/Motor test.mp4" title="Highlight Reel 3" autoplay muted loop playsinline
+                            style="width: 100%; height: 100%; object-fit: cover;"></video>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Content Section -->
+        <section class="about-content">
+            <div class="about-text reveal-left">
+                <h3>Our Story</h3>
+                <p>Founded in 2017, Space Club began as a small group of students passionate about aerospace
+                    engineering. What started as weekend projects has evolved into a competitive rocketry team
+                    participating in national competitions.</p>
+
+                <h3>What We Do</h3>
+                <p>We design, build, and launch rockets while pushing the boundaries of amateur rocketry. Our projects
+                    range from small educational models to advanced high-power rockets capable of reaching altitudes of
+                    over 10,000 feet.</p>
+
+                <div class="activities-grid">
+                    <div class="activity-card reveal-up reveal-delay-100">
+                        <i class="fas fa-wrench"></i>
+                        <h4>Design & Fabrication</h4>
+                        <p>Using CAD software and our workshop to bring rocket designs to life.</p>
+                    </div>
+                    <div class="activity-card reveal-up reveal-delay-200">
+                        <i class="fas fa-flask"></i>
+                        <h4>Research & Development</h4>
+                        <p>Experimenting with new materials, propulsion systems, and avionics.</p>
+                    </div>
+                    <div class="activity-card reveal-up reveal-delay-300">
+                        <i class="fas fa-chart-line"></i>
+                        <h4>Data Analysis</h4>
+                        <p>Collecting and interpreting flight data to improve future designs.</p>
+                    </div>
+                    <div class="activity-card reveal-up reveal-delay-400">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h4>Education & Outreach</h4>
+                        <p>Sharing our passion for rocketry with the community through workshops.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-stats reveal-right">
+                <h3>By The Numbers</h3>
+                <div class="stats-grid">
+                    <div class="stat-card reveal-up reveal-delay-100">
+                        <div class="stat-number" data-count="35">0</div>
+                        <div class="stat-label">Active Members</div>
+                    </div>
+                    <div class="stat-card reveal-up reveal-delay-200">
+                        <div class="stat-number" data-count="12">0</div>
+                        <div class="stat-label">Completed Projects</div>
+                    </div>
+                    <div class="stat-card reveal-up reveal-delay-300">
+                        <div class="stat-number" data-count="5">0</div>
+                        <div class="stat-label">Competitions</div>
+                    </div>
+                    <div class="stat-card reveal-up reveal-delay-400">
+                        <div class="stat-number" data-count="8">0</div>
+                        <div class="stat-label">Years Active</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Join Section -->
+        <section class="join-section reveal-up">
+            <h3>Join Our Mission</h3>
+            <p>Whether you're an engineering student or simply passionate about space, there's a place for you in our
+                club. No prior experience required - we'll teach you everything you need to know!</p>
+            <a href="contact.html" class="join-button">Become a Member</a>
+        </section>
+
+        <!-- Sponsors Section -->
+        <section class="sponsors-section reveal-up">
+            <div class="section-header">
+                <h2>Our Sponsors</h2>
+                <p>Supported by industry leaders</p>
+            </div>
+            <div class="sponsors-grid">
+                <div class="sponsor-card reveal-up reveal-delay-100">
+                    <img src="images/sponsors/Solidworks.png" alt="Dassault Systèmes / Solidworks"
+                        style="max-width: 90%; max-height: 90%; object-fit: contain;">
+                </div>
+                <div class="sponsor-card reveal-up reveal-delay-200">
+                    <img src="images/sponsors/Ansys.png" alt="ANSYS"
+                        style="max-width: 90%; max-height: 90%; object-fit: contain;">
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section brand">
+                <h4>Space Club RIT</h4>
+                <p>Rajarambapu Institute of Technology</p>
+                <p>Tal. Walwa, Dist. Sangli, Rajaramnagar, 415414.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/spaceclub_rit" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/space-club-rit/" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="mailto:spaceclub@ritindia.edu"><i class="fas fa-envelope"></i></a>
+                    <a href="https://youtube.com/@rit_spaceclub?si=YIbA51QsorcB-uHe" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section newsletter">
+                <h4>Stay Updated</h4>
+                <p>Join our social media for every update on our latest launches and events.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Space Club RIT. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+
+    <script src="about.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

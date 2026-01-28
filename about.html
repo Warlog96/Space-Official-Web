@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Club | About Us</title>
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+    <header>
+        <div class="logo">
+            <a href="index.html" style="display: flex; align-items: center; text-decoration: none; color: inherit;">
+                <img src="logo.png" alt="Space Club RIT Logo">
+                <h1>Space Club RIT</h1>
+            </a>
+        </div>
+        <nav>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about" class="active">About Us</a></li>
+                <li><a href="projects.html">Our Projects</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-btn">Our Team <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-content">
+                        <li><a href="propulsion.html">Propulsion</a></li>
+                        <li><a href="structure.html">Structure</a></li>
+                        <li><a href="recovery.html">Recovery</a></li>
+                        <li><a href="avionics.html">Avionics</a></li>
+                        <li><a href="satellite.html">Satellite</a></li>
+                        <li><a href="communication.html">Communication</a></li>
+                        <li><a href="Management.html">Management</a></li>
+                        <li><a href="Leaderboard.html">Leaderboard</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="about-container">
+        <!-- About Hero Section -->
+        <section class="about-hero">
+            <h2>About Space Club</h2>
+            <p class="subtitle">Exploring the final frontier, one project at a time</p>
+        </section>
+
+        <!-- Mission Section -->
+        <section class="about-mission">
+            <div class="mission-card">
+                <i class="fas fa-rocket"></i>
+                <h3>Our Mission</h3>
+                <p>To advance aerospace education and provide hands-on experience in rocket design, construction, and
+                    launch operations.</p>
+            </div>
+            <div class="mission-card">
+                <i class="fas fa-users"></i>
+                <h3>Our Team</h3>
+                <p>A diverse group of engineers, scientists, and enthusiasts dedicated to pushing the boundaries of
+                    space technology.</p>
+            </div>
+            <div class="mission-card">
+                <i class="fas fa-star"></i>
+                <h3>Our Vision</h3>
+                <p>To become a leading university rocketry team recognized for innovation and excellence in aerospace
+                    engineering.</p>
+            </div>
+        </section>
+
+        <!-- 3D Rocket Models Section -->
+        <section class="rocket-models-section">
+            <div class="section-header">
+                <h2>Our Rocket Models</h2>
+                <p>Explore our collection of detailed 3D rocket designs</p>
+            </div>
+
+            <div class="rocket-carousel">
+                <div class="carousel-controls">
+                    <button class="control-btn prev-btn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+
+                    <div class="rocket-names">
+                        <div class="rocket-name active" data-model="falcon">Falcon Nose Cone</div>
+                        <div class="rocket-name" data-model="engine">Engine Assembly</div>
+                        <div class="rocket-name" data-model="fin">Rocket Fin</div>
+                        <div class="rocket-name" data-model="nozzle">Engine Nozzle</div>
+                        <div class="rocket-name" data-model="stage">Rocket Stage</div>
+                    </div>
+
+                    <button class="control-btn next-btn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <div class="rocket-viewer">
+                    <div id="rocket-container">
+                        <div class="loading">
+                            <div class="spinner"></div>
+                            <span>Loading 3D viewer...</span>
+                        </div>
+                    </div>
+
+                    <div class="rocket-controls">
+                        <div class="control-group">
+                            <button class="control-toggle" id="rotate-toggle">
+                                <i class="fas fa-sync"></i> Auto-Rotate
+                            </button>
+                        </div>
+
+                        <div class="view-controls">
+                            <button class="view-btn" id="view-top">Top</button>
+                            <button class="view-btn" id="view-front">Front</button>
+                            <button class="view-btn" id="view-side">Side</button>
+                            <button class="view-btn active" id="view-iso">Isometric</button>
+                        </div>
+
+                        <div class="control-group">
+                            <button class="control-toggle" id="reset-view">
+                                <i class="fas fa-undo"></i> Reset View
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rocket-details">
+                    <h3>Model Information</h3>
+                    <p id="model-description">Select a model to view details</p>
+
+                    <div class="specs-grid">
+                        <div class="spec-item">
+                            <span class="spec-label">Model Name:</span>
+                            <span class="spec-value" id="model-name">-</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">File Type:</span>
+                            <span class="spec-value" id="model-file-type">-</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Vertices:</span>
+                            <span class="spec-value" id="model-vertices">-</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Faces:</span>
+                            <span class="spec-value" id="model-faces">-</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Content Section -->
+        <section class="about-content">
+            <div class="about-text">
+                <h3>Our Story</h3>
+                <p>Founded in 2017, Space Club began as a small group of students passionate about aerospace
+                    engineering. What started as weekend projects has evolved into a competitive rocketry team
+                    participating in national competitions.</p>
+
+                <h3>What We Do</h3>
+                <p>We design, build, and launch rockets while pushing the boundaries of amateur rocketry. Our projects
+                    range from small educational models to advanced high-power rockets capable of reaching altitudes of
+                    over 10,000 feet.</p>
+
+                <div class="activities-grid">
+                    <div class="activity-card">
+                        <i class="fas fa-wrench"></i>
+                        <h4>Design & Fabrication</h4>
+                        <p>Using CAD software and our workshop to bring rocket designs to life.</p>
+                    </div>
+                    <div class="activity-card">
+                        <i class="fas fa-flask"></i>
+                        <h4>Research & Development</h4>
+                        <p>Experimenting with new materials, propulsion systems, and avionics.</p>
+                    </div>
+                    <div class="activity-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h4>Data Analysis</h4>
+                        <p>Collecting and interpreting flight data to improve future designs.</p>
+                    </div>
+                    <div class="activity-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h4>Education & Outreach</h4>
+                        <p>Sharing our passion for rocketry with the community through workshops.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-stats">
+                <h3>By The Numbers</h3>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number" data-count="35">0</div>
+                        <div class="stat-label">Active Members</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-count="12">0</div>
+                        <div class="stat-label">Completed Projects</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-count="5">0</div>
+                        <div class="stat-label">Competitions</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-count="8">0</div>
+                        <div class="stat-label">Years Active</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Join Section -->
+        <section class="join-section">
+            <h3>Join Our Mission</h3>
+            <p>Whether you're an engineering student or simply passionate about space, there's a place for you in our
+                club. No prior experience required - we'll teach you everything you need to know!</p>
+            <a href="contact.html" class="join-button">Become a Member</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section brand">
+                <h4>Space Club RIT</h4>
+                <p>Rajarambapu Institute of Technology</p>
+                <p>Tal. Walwa, Dist. Sangli, Rajaramnagar, 415414.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/spaceclub_rit" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/space-club-rit/" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="mailto:spaceclub@ritindia.edu"><i class="fas fa-envelope"></i></a>
+                    <a href="https://youtube.com/@rit_spaceclub?si=YIbA51QsorcB-uHe" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section newsletter">
+                <h4>Stay Updated</h4>
+                <p>Join our social media for every update on our latest launches and events.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Space Club RIT. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+    <script>
+        // Animated counter for stats
+        function animateCounters() {
+            statNumbers.forEach(stat => {
+                const target = parseInt(stat.getAttribute('data-count'));
+                const duration = 2000;
+                const step = target / (duration / 16);
+
+                let current = 0;
+                const counter = setInterval(() => {
+                    current += step;
+                    if (current >= target) {
+                        clearInterval(counter);
+                        stat.textContent = target;
+                    } else {
+                        stat.textContent = Math.floor(current);
+                    }
+                }, 16);
+            });
+        }
+    </script>
+    <script>
+        // Intersection Observers
+        const statNumbers = document.querySelectorAll('.stat-number');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.5
+        });
+
+        const cardsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        if (document.querySelector('.about-stats')) {
+            document.querySelectorAll('.stat-number').forEach(stat => {
+                statsObserver.observe(stat);
+            });
+        }
+
+        projectCards.forEach(card => {
+            card.style.opacity = 0;
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'all 0.5s ease-out';
+            cardsObserver.observe(card);
+        });
+    </script>
+
+
+
+    <!-- Three.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/STLLoader.js"></script>
+
+    <!-- Main JavaScript: 3D VIEW SECTION (modified) -->
+    <script>
+        // Three.js variables
+        let scene, camera, renderer, controls;
+        let currentModel = null;
+        let autoRotate = true;
+
+        // Model information
+        const modelInfo = {
+            falcon: {
+                name: "Falcon Nose Cone",
+                file: "models/falcon.stl",
+                desc: "Aerodynamic nose cone design optimized for high-altitude flight with reduced drag coefficient.",
+                vertices: "12,458",
+                faces: "8,342"
+            },
+            engine: {
+                name: "Engine Assembly",
+                file: "models/engine.stl",
+                desc: "Complete rocket engine assembly featuring our custom hybrid propulsion system.",
+                vertices: "23,671",
+                faces: "15,892"
+            },
+            fin: {
+                name: "Rocket Fin",
+                file: "models/fin.stl",
+                desc: "Stabilizing fin designed for optimal flight characteristics and structural integrity.",
+                vertices: "8,452",
+                faces: "5,631"
+            },
+            nozzle: {
+                name: "Engine Nozzle",
+                file: "models/nozzle.stl",
+                desc: "High-performance engine nozzle with optimized expansion ratio for maximum thrust.",
+                vertices: "15,327",
+                faces: "10,218"
+            },
+            stage: {
+                name: "Rocket Stage",
+                file: "models/stage.stl",
+                desc: "Complete rocket stage with integrated fuel tanks and avionics bay.",
+                vertices: "31,845",
+                faces: "21,230"
+            }
+        };
+
+        // Initialize Three.js scene
+        function initThreeJS() {
+            const container = document.getElementById('rocket-container');
+
+            // Clear previous content
+            container.innerHTML = '';
+
+            // Scene setup
+            scene = new THREE.Scene();
+            scene.background = new THREE.Color(0x020c1b); // UPDATED COLOR
+
+            // Camera setup
+            camera = new THREE.PerspectiveCamera(
+                60, // a bit narrower FOV for nicer framing
+                container.clientWidth / container.clientHeight,
+                0.1,
+                2000
+            );
+            camera.position.set(0, 0, 5);
+
+            // Renderer setup
+            renderer = new THREE.WebGLRenderer({
+                antialias: true
+            });
+            renderer.setSize(container.clientWidth, container.clientHeight);
+            renderer.setPixelRatio(window.devicePixelRatio);
+            container.appendChild(renderer.domElement);
+
+            // Controls setup
+            controls = new THREE.OrbitControls(camera, renderer.domElement);
+            controls.enableDamping = true;
+            controls.dampingFactor = 0.05;
+            controls.autoRotate = autoRotate;
+            controls.autoRotateSpeed = 0.2; // SLOW, smooth rotation
+
+            // Lighting
+            const ambientLight = new THREE.AmbientLight(0x404040, 0.6);
+            scene.add(ambientLight);
+
+            const directionalLight1 = new THREE.DirectionalLight(0xffffff, 1);
+            directionalLight1.position.set(1, 1, 1);
+            scene.add(directionalLight1);
+
+            const directionalLight2 = new THREE.DirectionalLight(0xffffff, 0.5);
+            directionalLight2.position.set(-1, -1, -1);
+            scene.add(directionalLight2);
+
+            // Start animation loop
+            animate();
+
+            // Add window resize listener
+            window.addEventListener('resize', onWindowResize);
+        }
+
+        // Animation loop (single global loop)
+        function animate() {
+            requestAnimationFrame(animate);
+            if (controls) controls.update();
+            if (renderer && scene && camera) {
+                renderer.render(scene, camera);
+            }
+        }
+
+        // Helper: fit current model nicely into view
+        function fitModelInView(mesh) {
+            if (!mesh) return;
+
+            // Compute bounding box
+            const box = new THREE.Box3().setFromObject(mesh);
+            const size = box.getSize(new THREE.Vector3());
+            const center = box.getCenter(new THREE.Vector3());
+
+            // Move model so its center sits at origin
+            mesh.position.sub(center);
+
+            // Largest dimension
+            const maxDim = Math.max(size.x, size.y, size.z);
+
+            // Distance from camera based on FOV
+            const fov = camera.fov * (Math.PI / 180);
+            let cameraDist = (maxDim / 2) / Math.tan(fov / 2);
+
+            cameraDist *= 1.4; // padding
+
+            camera.position.set(cameraDist, cameraDist * 0.4, cameraDist);
+            camera.near = maxDim / 100;
+            camera.far = maxDim * 100;
+            camera.updateProjectionMatrix();
+
+            // Orbit around the model center
+            controls.target.set(0, 0, 0);
+            controls.update();
+        }
+
+        // STL Model Loader function
+        function loadModel(modelName) {
+            // Remove current model if exists
+            if (currentModel) {
+                scene.remove(currentModel);
+                currentModel.geometry.dispose();
+                currentModel.material.dispose();
+                currentModel = null;
+            }
+
+            const container = document.getElementById('rocket-container');
+
+            // Show loading indicator
+            const loadingDiv = document.createElement('div');
+            loadingDiv.className = 'loading';
+            loadingDiv.innerHTML = `
+                <div class="spinner"></div>
+                <span>Loading model...</span>
+            `;
+            container.appendChild(loadingDiv);
+
+            // Get model info
+            const info = modelInfo[modelName];
+
+            // Create STL loader
+            const loader = new THREE.STLLoader();
+
+            loader.load(
+                info.file,
+                function (geometry) {
+                    // Clear loading indicator
+                    loadingDiv.remove();
+
+                    // Ensure bounding box exists
+                    geometry.computeBoundingBox();
+
+                    const material = new THREE.MeshPhongMaterial({
+                        color: 0x64ffda, // Updated to cyan
+                        specular: 0x111111,
+                        shininess: 100,
+                        flatShading: true
+                    });
+
+                    currentModel = new THREE.Mesh(geometry, material);
+                    scene.add(currentModel);
+
+                    // Fit nicely into camera view
+                    fitModelInView(currentModel);
+
+                    // Update model info panel
+                    document.getElementById('model-name').textContent = info.name;
+                    document.getElementById('model-description').textContent = info.desc;
+                    document.getElementById('model-file-type').textContent = "STL";
+                    document.getElementById('model-vertices').textContent = info.vertices;
+                    document.getElementById('model-faces').textContent = info.faces;
+                },
+                undefined,
+                function (error) {
+                    // Error case
+                    console.error('Error loading model:', error);
+                    loadingDiv.innerHTML = `
+                        <i class="fas fa-exclamation-triangle" style="font-size: 2rem; margin-bottom: 10px;"></i>
+                        <span>Error loading model: ${error.message || 'File not found'}</span>
+                        <p class="small">Make sure you're running this page through a local server</p>
+                    `;
+
+                    // Still update the info panel with text
+                    document.getElementById('model-name').textContent = info.name;
+                    document.getElementById('model-description').textContent = info.desc;
+                    document.getElementById('model-file-type').textContent = "STL";
+                    document.getElementById('model-vertices').textContent = info.vertices;
+                    document.getElementById('model-faces').textContent = info.faces;
+                }
+            );
+        }
+
+        // Handle window resize
+        function onWindowResize() {
+            const container = document.getElementById('rocket-container');
+            if (!container || !camera || !renderer) return;
+
+            camera.aspect = container.clientWidth / container.clientHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(container.clientWidth, container.clientHeight);
+        }
+
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize Three.js
+            initThreeJS();
+
+            // Model buttons
+            document.querySelectorAll('.rocket-name').forEach(button => {
+                button.addEventListener('click', function () {
+                    const modelName = this.getAttribute('data-model');
+
+                    // Update active button
+                    document.querySelectorAll('.rocket-name').forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+
+                    // Load model
+                    loadModel(modelName);
+                });
+            });
+
+            // View control buttons
+            document.querySelectorAll('.view-btn').forEach(button => {
+                button.addEventListener('click', function () {
+                    const action = this.id;
+                    const distance = 8;
+
+                    switch (action) {
+                        case 'view-top':
+                            camera.position.set(0, distance, 0.001);
+                            break;
+                        case 'view-front':
+                            camera.position.set(0, 0, distance);
+                            break;
+                        case 'view-side':
+                            camera.position.set(distance, 0, 0);
+                            break;
+                        case 'view-iso':
+                            camera.position.set(distance * 0.7, distance * 0.5, distance * 0.7);
+                            break;
+                    }
+
+                    camera.lookAt(0, 0, 0);
+                    controls.target.set(0, 0, 0);
+
+                    this.parentElement.querySelectorAll('.view-btn').forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+
+            // Auto-rotate toggle
+            document.getElementById('rotate-toggle').addEventListener('click', function () {
+                autoRotate = !autoRotate;
+                controls.autoRotate = autoRotate;
+                this.classList.toggle('active', autoRotate);
+            });
+
+            // Reset view button: re-fit current model
+            document.getElementById('reset-view').addEventListener('click', function () {
+                if (currentModel) {
+                    fitModelInView(currentModel);
+                } else {
+                    controls.reset();
+                }
+            });
+
+            // Carousel navigation
+            document.querySelector('.prev-btn').addEventListener('click', function () {
+                const activeModel = document.querySelector('.rocket-name.active');
+                const prevModel = activeModel.previousElementSibling ||
+                    document.querySelector('.rocket-name:last-child');
+
+                if (prevModel) {
+                    activeModel.classList.remove('active');
+                    prevModel.classList.add('active');
+                    loadModel(prevModel.getAttribute('data-model'));
+                }
+            });
+
+            document.querySelector('.next-btn').addEventListener('click', function () {
+                const activeModel = document.querySelector('.rocket-name.active');
+                const nextModel = activeModel.nextElementSibling ||
+                    document.querySelector('.rocket-name:first-child');
+
+                if (nextModel) {
+                    activeModel.classList.remove('active');
+                    nextModel.classList.add('active');
+                    loadModel(nextModel.getAttribute('data-model'));
+                }
+            });
+
+            // Load the first model by default
+            setTimeout(() => {
+                const first = document.querySelector('.rocket-name.active') || document.querySelector('.rocket-name');
+                if (first) first.click();
+            }, 500);
+        });
+    </script>
+</body>
+
+</html>

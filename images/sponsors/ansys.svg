@@ -1,0 +1,8 @@
+<svg width="400" height="150" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <rect fill="none" id="canvas_background" height="152" width="402" y="-1" x="-1"/>
+ </g>
+ <g>
+  <text font-weight="bold" xml:space="preserve" text-anchor="middle" font-family="Arial, sans-serif" font-size="60" id="svg_1" y="95" x="200" stroke-width="0" stroke="#000" fill="#FFB71B">ANSYS</text>
+ </g>
+</svg>
